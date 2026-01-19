@@ -1,0 +1,51 @@
+{
+  "name": "Yadika Laravel Marketplace Project",
+
+  // Memberitahu Codespaces untuk menggunakan docker-compose.yml
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+
+  // Menentukan service mana yang menjadi 'ruang kerja utama' kita
+  "service": "app",
+
+  // Menentukan folder mana yang akan dibuka di VS Code di dalam container
+  "workspaceFolder": "/workspace",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+
+  // Port yang akan otomatis di-forward saat Codespaces berjalan
+  "forwardPorts": [
+    8000, // Untuk 'php artisan serve'
+    8088, // Untuk phpMyAdmin
+    5173, // Untuk Vite (npm run dev di Laravel modern)
+    3306  // Untuk koneksi database jika perlu dari luar
+  ],
+
+
+  // sudo -E docker-php-ext-install pdo_mysql pcntl
+
+  // Perintah yang akan dijalankan OTOMATIS setelah container dibuat pertama kali
+"postCreateCommand": "sudo docker-php-ext-install pdo_mysql pcntl && sudo docker-php-ext-enable pdo_mysql pcntl && composer install && npm install && cp .env.example .env && php artisan key:generate && sudo chmod -R 777 storage bootstrap/cache",
+// Kustomisasi untuk VS Code di dalam Codespace
+  "customizations": {
+    "vscode": {
+      // Daftar ekstensi yang akan diinstal OTOMATIS
+      "extensions": [
+        "bmewburn.vscode-intelephense-client", // PHP IntelliSense
+        "bradlc.vscode-tailwindcss",          // Tailwind CSS IntelliSense
+        "Vue.volar",                          // Dukungan untuk Vue.js
+        "onecentlin.laravel-blade",           // Blade Snippets
+        "shufo.vscode-blade-formatter",       // Formatter untuk Blade
+        "mikestead.dotenv"                    // Syntax highlighting untuk file .env
+      ]
+    }
+  },
+
+  // Menjalankan VS Code sebagai user non-root di dalam container
+  "remoteUser": "vscode"
+}

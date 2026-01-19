@@ -1,0 +1,1 @@
+oke lanjut, buatkan user untuk admin dengan email raja@raja.com dan password rajaxrizx terus ketika siswa atau guru mendaftar itu harus disetujui dulu atau bilangnya harus aktivasi dulu ke admin atau saya, terus 

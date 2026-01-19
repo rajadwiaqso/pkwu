@@ -1,0 +1,8 @@
+
+.item:hover{
+    background-color: #2563eb;
+    color: white;
+    opacity: 90%;
+    box-shadow: 1px 2px black; 
+    transition: all ease-in-out 0.3s;
+}

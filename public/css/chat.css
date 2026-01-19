@@ -1,0 +1,3 @@
+.message-box {
+    word-break: break-word; /* Mencegah teks panjang keluar dari box */
+}

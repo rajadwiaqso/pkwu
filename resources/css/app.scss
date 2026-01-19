@@ -1,0 +1,37 @@
+// resources/css/app.scss
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Custom Sass: Tambahkan struktur folder Anda di sini */
+// Hapus import SCSS yang tidak ada agar build berhasil
+// @import 'abstracts/variables'; // Contoh: resources/css/abstracts/_variables.scss
+// @import 'components/buttons';   // Contoh: resources/css/components/_buttons.scss
+// @import 'layouts/header';     // Contoh: resources/css/layouts/_header.scss
+
+@import 'tailwindcss/utilities';
+
+
+// Custom styles
+$primary: #4B5563;
+
+body {
+    background: $primary;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; // Custom font for headings
+}
+
+a {
+    // color: #5a4fcf; // Custom link color
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; // Underline on hover
+}
+
+// Hapus @apply jika error, gunakan class Tailwind langsung di komponen Vue atau Blade
+// .btn, .card, dst, bisa didefinisikan di komponen, bukan di SCSS

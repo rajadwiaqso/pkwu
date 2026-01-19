@@ -1,0 +1,37 @@
+/* Contoh kustomisasi navbar */
+.navbar {
+    background-color: #f8f9fa; /* Warna latar belakang navbar (bisa disesuaikan) */
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek shadow tipis */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    color: #333; /* Warna teks link */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Warna teks link saat hover */
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-input {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+
+
+/* Styling ikon */
+.navbar-nav .nav-link i {
+    font-size: 1.2rem;
+}

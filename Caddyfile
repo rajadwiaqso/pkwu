@@ -1,0 +1,12 @@
+{
+    order php_server last
+}
+
+:8000 {
+    log
+    php_server {
+        root public/
+        transport http
+        split_path .php
+    }
+}
